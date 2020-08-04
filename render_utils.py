@@ -16,7 +16,7 @@ from six import BytesIO
 def display_image(image):
   fig = plt.figure(figsize=(20, 15))
   plt.grid(False)
-  plt.imshow(image)
+  plt.imsave("/mnt/c/Users/safre/testing/test.png", image)
 
 
 def download_and_resize_image(url, new_width=256, new_height=256,

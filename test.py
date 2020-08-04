@@ -15,7 +15,7 @@ print(tf.__version__)
 
 # By Heiko Gorski, Source: https://commons.wikimedia.org/wiki/File:Naxos_Taverna.jpg
 image_url = "https://upload.wikimedia.org/wikipedia/commons/6/60/Naxos_Taverna.jpg"  
-downloaded_image_path = download_and_resize_image(image_url, 1280, 856, True)
+downloaded_image_path = download_and_resize_image(image_url, 1280, 856, False)
 
 module_handle = "https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_resnet_v2/1" 
 

@@ -13,10 +13,10 @@ import tempfile
 from six.moves.urllib.request import urlopen
 from six import BytesIO
 
-def display_image(image):
+def display_image(filename, image):
   fig = plt.figure(figsize=(20, 15))
   plt.grid(False)
-  plt.imsave("/mnt/c/Users/safre/testing/test.png", image)
+  plt.imsave(filename, image)
 
 
 def download_and_resize_image(url, new_width=256, new_height=256,
@@ -30,8 +30,6 @@ def download_and_resize_image(url, new_width=256, new_height=256,
   pil_image_rgb = pil_image.convert("RGB")
   pil_image_rgb.save(filename, format="JPEG", quality=90)
   print("Image downloaded to %s." % filename)
-  if display:
-    display_image(pil_image)
   return filename
 
 

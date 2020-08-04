@@ -13,8 +13,7 @@ from render_utils import draw_boxes
 # Print Tensorflow version
 print(tf.__version__)
 
-# By Heiko Gorski, Source: https://commons.wikimedia.org/wiki/File:Naxos_Taverna.jpg
-image_url = "https://upload.wikimedia.org/wikipedia/commons/6/60/Naxos_Taverna.jpg"  
+image_url = "https://upload.wikimedia.org/wikipedia/commons/3/30/Boston_Skyline%2C_SONY_NEX-5_Panorama_Mode_%284765830049%29.jpg"  
 downloaded_image_path = download_and_resize_image(image_url, 1280, 856, False)
 
 module_handle = "https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_resnet_v2/1" 
@@ -43,6 +42,6 @@ def run_detector(detector, path):
       img.numpy(), result["detection_boxes"],
       result["detection_class_entities"], result["detection_scores"])
 
-  display_image(image_with_boxes)
+  display_image("/mnt/c/Users/safre/testing/boston.png", image_with_boxes)
 
 run_detector(detector, downloaded_image_path)

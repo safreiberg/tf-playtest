@@ -13,7 +13,6 @@ from render_utils import draw_boxes
 # Print Tensorflow version
 print(tf.__version__)
 
-
 images = dict()
 images['boston'] = "https://upload.wikimedia.org/wikipedia/commons/3/30/Boston_Skyline%2C_SONY_NEX-5_Panorama_Mode_%284765830049%29.jpg"
 images['beach'] = "https://upload.wikimedia.org/wikipedia/commons/0/0b/170428-A-OI229_33_%2834250568621%29.jpg"
